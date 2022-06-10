@@ -1,2 +1,34 @@
-@import 'bulma/css/bulma.css';
+@charset "utf-8";
+@import '@fermyon/styleguide/scss/fermyon-color.scss';
+@import '@fermyon/styleguide/scss/fermyon-mixins.scss';
+@import '@fermyon/styleguide/scss/fermyon-type.scss';
+@import '@fermyon/styleguide/scss/fermyon-responsive.scss';
+
+// Remapping Bulma Colors
+$primary: $oxfordblue;
+$link: darken($colablue, 12.5%);
+$info: darken($lavender, 10%);
+$success: darken($midgreen, 10%);
+$warning: $rust;
+$danger: darken($rust, 25%);
+$dark: $darkspace;
+
+// Typography
+$family-sans-serif: $sen;
+$family-monospace: $mono;
+$text: $oxfordblue;
+
+$body-background-color: lighten($lightlavender, 5%);
+
+// HACK: make navbar styling consistent
+#topbar {
+    background-color: lighten($lightlavender, 5%);
+}
+
+// HACK: fix error message styling
+.message-body {
+    background-color: white !important;
+}
+
+@import 'bulma';
 @import 'bulma-tooltip/dist/css/bulma-tooltip.min.css';
